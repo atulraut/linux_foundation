@@ -1,0 +1,16 @@
+Below list of issues I found with SyzKaller - 
+
+1] Issue - Failed to ssh into qemu
+Why - Didn't created ssh key
+Fix
+- generate an SSH key pair, using ssh-keygen command
+
+2] Issue - Failed to compile syzkaller
+After ﬁring make command, it used to exit in a minute.
+Fix - Was using some older laptop/machine, switch to latest hardware.
+
+3] Issue - Missing reproducer
+BUG: unable to handle kernel NULL pointer dereference in __io_remove_buffers
+e.g. https://syzkaller.appspot.com/bug?extid=70de24bf68bee5f644e3
+Some of issues that syzkaller generated dont have reproducer
+If we try to ﬁx such issues, syzkaller failed to verify.
